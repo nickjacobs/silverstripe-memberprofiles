@@ -206,7 +206,7 @@ class MemberProfilePage extends Page
                     'Fields',
                     _t('MemberProfiles.PROFILEFIELDS', 'Profile Fields'),
                     $this->Fields(),
-                    $grid = GridFieldConfig_RecordEditor::create()
+                    $grid = GridFieldConfig_RecordEditor::create(100)
                         ->removeComponentsByType(GridFieldDeleteAction::class)
                         ->removeComponentsByType(GridFieldAddNewButton::class)
                 )

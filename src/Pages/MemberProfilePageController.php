@@ -615,8 +615,7 @@ class MemberProfilePageController extends PageController
                     $member->ID,
                     '?token=' . $member->ValidationKey
                 );
-
-                $mail->setSubject("Registration Approval Requested for $config->Title");
+                $mail->setSubject("Approval Requested for $config->Title ($member->Name)");
                 $mail->setReplyTo($this->EmailReplyTo);
                 $mail->setHTMLTemplate('Symbiote\\MemberProfiles\\Email\\MemberRequiresApprovalEmail');
                 $mail->setData([

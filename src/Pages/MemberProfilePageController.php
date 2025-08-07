@@ -617,6 +617,7 @@ class MemberProfilePageController extends PageController
                 );
 
                 $mail->setSubject("Registration Approval Requested for $config->Title");
+                $mail->setReplyTo($this->EmailReplyTo);
                 $mail->setHTMLTemplate('Symbiote\\MemberProfiles\\Email\\MemberRequiresApprovalEmail');
                 $mail->setData([
                     'SiteConfig'  => $config,

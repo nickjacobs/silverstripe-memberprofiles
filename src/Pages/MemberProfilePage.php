@@ -90,6 +90,7 @@ class MemberProfilePage extends Page
         'RequireApproval'          => 'Boolean',
         'EmailType'                => 'Enum("Validation, Confirmation, None", "None")',
         'EmailFrom'                => 'Varchar(255)',
+        'EmailReplyTo'                => 'Varchar(255)',
         'EmailSubject'             => 'Varchar(255)',
         'EmailTemplate'            => 'Text',
         'ConfirmationTitle'        => 'Varchar(255)',
@@ -324,6 +325,7 @@ class MemberProfilePage extends Page
                         [
                             TextField::create('EmailSubject', _t('MemberProfiles.EMAILSUBJECT', 'Email subject')),
                             TextField::create('EmailFrom', _t('MemberProfiles.EMAILFROM', 'Email from')),
+                            TextField::create('EmailReplyTo', 'Email reply-to'),
                             TextareaField::create('EmailTemplate', _t('MemberProfiles.EMAILTEMPLATE', 'Email template')),
                             LiteralField::create(
                                 'TemplateNote',
